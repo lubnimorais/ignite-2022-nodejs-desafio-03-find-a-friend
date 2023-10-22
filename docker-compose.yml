@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+ # NOME DO CONTAINER
+ api-findafriend-pg:
+  # IMAGEM QUE VAI UTILIZAR
+  image: 'bitnami/postgresql'
+  # PORTA QUE VAI EXPOR
+  ports: 
+    - '5432:5432'
+  # VARIÁVEIS AMBIENTE
+  environment:
+    - POSTGRESQL_USERNAME=postgres
+    - POSTGRESQL_PASSWORD=docker
+    - POSTGRESQL_DATABASE=apisolid

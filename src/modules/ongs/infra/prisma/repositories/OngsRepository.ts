@@ -42,6 +42,14 @@ class OngsRepository implements IOngsRepository {
       },
     });
   }
+
+  async findById(id: string): Promise<ONG | null> {
+    return prismaClient.oNG.findUnique({
+      where: {
+        id,
+      },
+    });
+  }
 }
 
 export { OngsRepository };

@@ -14,6 +14,7 @@ interface IOngsRepository {
     city,
   }: Prisma.ONGCreateInput): Promise<ONG>;
   findByEmail(email: string): Promise<ONG | null>;
+  findById(id: string): Promise<ONG | null>;
 }
 
 export { IOngsRepository };

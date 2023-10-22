@@ -2,14 +2,27 @@ import fastify from 'fastify';
 
 import cookie from '@fastify/cookie';
 
+import fastifyJwt from '@fastify/jwt';
+
 import { ZodError } from 'zod';
 
 import { env } from '../../../env';
+
+import authConfig from '@config/auth';
 
 import { appRoutes } from './routes';
 
 const app = fastify();
 
+app.register(fastifyJwt, {
+  secret: authConfig.jwt.JWT_SECRET,
+  cookie: {
+    cookieName: 'refreshToken',
+    signed: false,
+  },
+});
+
+// COOKIES
 app.register(cookie);
 
 // ROUTES

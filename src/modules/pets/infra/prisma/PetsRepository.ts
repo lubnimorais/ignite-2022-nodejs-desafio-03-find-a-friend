@@ -10,7 +10,6 @@ class PetsRepository implements IPetsRepository {
     description,
     energy_level,
     size,
-    city,
     observations,
     ong_id,
   }: Prisma.PetCreateInput): Promise<Pet> {
@@ -20,7 +19,6 @@ class PetsRepository implements IPetsRepository {
         description,
         energy_level,
         size,
-        city,
         observations,
         ong_id,
       },
@@ -40,7 +38,9 @@ class PetsRepository implements IPetsRepository {
   async findByCity(city: string): Promise<Pet[]> {
     return prismaClient.pet.findMany({
       where: {
-        city,
+        ong: {
+          city,
+        },
       },
     });
   }

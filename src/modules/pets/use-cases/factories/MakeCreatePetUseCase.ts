@@ -1,12 +1,19 @@
 import { OngsRepository } from '@modules/ongs/infra/prisma/repositories/OngsRepository';
 import { PetsRepository } from '@modules/pets/infra/prisma/PetsRepository';
+import { PetImagesRepository } from '@modules/pets/infra/prisma/PetImagesRepository';
+
 import { CreatePetUseCase } from '../createPet/CreatePetUseCase';
 
 function makeCreatePetUseCase() {
   const petsRepository = new PetsRepository();
-  const ongsRepositoru = new OngsRepository();
+  const ongsRepository = new OngsRepository();
+  const petImagesRepository = new PetImagesRepository();
 
-  const createPetUseCase = new CreatePetUseCase(petsRepository, ongsRepositoru);
+  const createPetUseCase = new CreatePetUseCase(
+    petsRepository,
+    ongsRepository,
+    petImagesRepository,
+  );
 
   return createPetUseCase;
 }

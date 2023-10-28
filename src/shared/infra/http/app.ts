@@ -4,6 +4,8 @@ import cookie from '@fastify/cookie';
 
 import fastifyJwt from '@fastify/jwt';
 
+import multer from 'fastify-multer';
+
 import { ZodError } from 'zod';
 
 import { env } from '../../../env';
@@ -24,6 +26,9 @@ app.register(fastifyJwt, {
 
 // COOKIES
 app.register(cookie);
+
+// MULTER
+app.register(multer.contentParser);
 
 // ROUTES
 app.register(appRoutes);

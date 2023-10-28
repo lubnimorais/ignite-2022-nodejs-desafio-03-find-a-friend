@@ -2,9 +2,10 @@ import { User } from '@prisma/client';
 
 import { hash } from 'bcryptjs';
 
+import { prismaClient } from '@shared/infra/prisma';
+
 import { IUsersRepository } from '@modules/users/repositories/IUsersRepository';
 import { UserAlreadyExistsError } from '../errors/UserAlreadyExistsError';
-import { prismaClient } from '@shared/infra/prisma';
 
 interface IRequest {
   name: string;

@@ -1,4 +1,4 @@
-import { OngsRepository } from '@modules/ongs/infra/prisma/repositories/OngsRepository';
+import { OngsRepository } from '@modules/ongs/infra/repositories/prisma/OngsRepository';
 import { PetsRepository } from '@modules/pets/infra/prisma/PetsRepository';
 import { PetImagesRepository } from '@modules/pets/infra/prisma/PetImagesRepository';
 

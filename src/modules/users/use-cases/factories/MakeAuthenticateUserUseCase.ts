@@ -1,4 +1,4 @@
-import { UsersRepository } from '@modules/users/infra/prisma/repositories/UsersRepository';
+import { UsersRepository } from '@modules/users/infra/repositories/prisma/UsersRepository';
 import { AuthenticateUserUseCase } from '../authenticateUser/AuthenticateUserUseCase';
 
 function makeAuthenticateUserUseCase() {

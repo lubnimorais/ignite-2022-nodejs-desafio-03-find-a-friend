@@ -1,4 +1,4 @@
-import { UsersRepository } from '@modules/users/infra/prisma/repositories/UsersRepository';
+import { UsersRepository } from '@modules/users/infra/repositories/prisma/UsersRepository';
 import { CreateUserUseCase } from '../createUser/CreateUserUseCase';
 
 function makeCreateUserUseCase() {

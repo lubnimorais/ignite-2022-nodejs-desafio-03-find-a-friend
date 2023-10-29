@@ -1,4 +1,4 @@
-import { PetsRepository } from '@modules/pets/infra/prisma/PetsRepository';
+import { PetsRepository } from '@modules/pets/infra/repositories/prisma/PetsRepository';
 import { ListPetsByCityUseCase } from '../listPetByCity/ListPetsByCityUseCase';
 
 function makeListPetsByCityUseCase() {

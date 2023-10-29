@@ -1,5 +1,5 @@
-import { PetsRepository } from '@modules/pets/infra/prisma/PetsRepository';
-import { ShowPetUseCase } from '../shoPet/ShowPetUseCase';
+import { PetsRepository } from '@modules/pets/infra/repositories/prisma/PetsRepository';
+import { ShowPetUseCase } from '../showPet/ShowPetUseCase';
 
 function makeShowPetUseCase() {
   const petsRepository = new PetsRepository();

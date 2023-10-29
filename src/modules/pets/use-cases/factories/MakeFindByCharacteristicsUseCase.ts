@@ -1,4 +1,4 @@
-import { PetsRepository } from '@modules/pets/infra/prisma/PetsRepository';
+import { PetsRepository } from '@modules/pets/infra/repositories/prisma/PetsRepository';
 import { FindByCharacteristicsUseCase } from '../findByCharacteristics/FindByCharacteristicsUseCase';
 
 function makeFindByCharacteristicsUseCase() {

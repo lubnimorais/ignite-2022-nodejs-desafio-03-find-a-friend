@@ -15,6 +15,7 @@ class PetsRepository implements IPetsRepository {
     energy_level,
     size,
     observations,
+    independence,
     ong_id,
   }: Prisma.PetUncheckedCreateInput): Promise<Pet> {
     const pet = await prismaClient.pet.create({
@@ -25,6 +26,7 @@ class PetsRepository implements IPetsRepository {
         energy_level,
         size,
         observations,
+        independence,
         ong_id,
       },
     });
@@ -58,7 +60,7 @@ class PetsRepository implements IPetsRepository {
     independence,
     size,
     city,
-  }: FindByCharacteristicsParams) {
+  }: FindByCharacteristicsParams): Promise<Pet[]> {
     const pet = await prismaClient.pet.findMany({
       where: {
         age: {
